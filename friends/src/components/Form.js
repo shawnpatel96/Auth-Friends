@@ -1,7 +1,21 @@
 import React, { useState } from "react";
 // import axios from "axios";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import styled from "styled-components"
 
+const Button= styled.button`
+background-color: #4CAF50;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+
+`
  const Form =()=>{
     const [newFriend, setNewFriend] = useState({});
 
@@ -48,7 +62,7 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
                     value={newFriend.email}
                     onChange={handleChanges}
                 />
-                <button>ADD A FRIEND</button>
+                <Button>ADD A FRIEND</Button>
                 
 
             </form>
